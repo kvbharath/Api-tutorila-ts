@@ -25,11 +25,12 @@ app.post("/api/sessions",validateRequest.validate(createUserSessionSchema),creat
 //GET /api/session
 app.get("/api/sessions",requiresUser,getUserSessionsHandler)
 
-
-
 //Logout
 // DELETE /api/session
 
-app.delete("/api/sessions",requiresUser,invalidateUserSessionHandler)
+app.delete("/api/sessions",requiresUser,invalidateUserSessionHandler);
 
+// Create post
+
+// app.post("/api/posts",[requiresUser,validateRequest(createPostSchema)],createPostHandler);
 }
